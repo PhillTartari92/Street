@@ -1,0 +1,40 @@
+{% extends 'base.html.twig' %}
+{% block stylesheets %}
+
+	<style>
+
+		.logo-fiche a img {
+			width: 30vh;
+			height: 10vh;
+			margin:auto;
+			margin-top: 2vh;
+		}
+
+	</style>
+
+{% endblock %}
+
+{% block title %}{{parent()}}{% endblock %}
+
+{% block body %}
+<h1 class='logo-fiche text-center'>
+		<a href="href={{path('app_home')}}"><img src="{{ asset('Assets/Images/transparent.png') }}" alt="logo"></a>
+	</h1>
+<div class="row m-5 text-center">
+			<div class="col-md-4 m-auto modal-xl">
+				<div class="card">
+					<img src="{{asset(image)}}" class="card-img-top" alt={{titre }}>
+					<div class="card-body">
+						<h5 class="card-title">{{titre}}</h5>
+						<p class="card-text">{{description }}</p>
+						<p><b> {{prix}}€</b></p>
+						<a href="{{path('app_login')}}" class="btn btn-primary w-50">Acheter</a>
+					</div>
+					
+				</div>
+			</div>
+			
+	</div>
+
+
+{% endblock %}

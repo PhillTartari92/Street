@@ -1,0 +1,46 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}
+	{{parent()}}
+	| Login
+{% endblock %}
+
+{% block stylesheets %}
+	<style>
+		.text-center a img {
+			width: 30vh;
+			height: 10vh;
+			margin: 1vh auto;
+		}
+
+		.row {
+			margin: auto;
+			width: 40vw;
+		}
+
+		.btn-login a {
+			margin: 3vh 0;
+         width: 15vw;
+		}
+	</style>
+{% endblock %}
+
+{% block body %}
+	<h1 class='text-center'>
+		<a href="href={{path('app_home')}}"><img src="{{ asset('Assets/Images/transparent.png') }}" alt="logo"></a>
+	</h1>
+
+	<div class="row">
+		<div class="text-center mt-5 mb-4">
+			{{form(loginForm)}}
+			<div class='m-auto w-75'>
+				<a href="{{path('app_home')}}" class='btn btn-primary w-50 mt-3'>Login</a>
+			</div>
+			</div>
+			<div class='btn-login text-center w-50 m-auto'>
+				<a href="{{path('app_signup')}}" class='btn btn-outline-secondary w-100 btn-sm mt-5'>Créer votre compte</a>
+			</div>
+		</div>
+
+
+	{% endblock %}

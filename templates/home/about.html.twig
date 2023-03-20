@@ -1,0 +1,51 @@
+{% extends "base.html.twig" %}
+
+{% block stylesheets %}
+
+	<style>
+		.container-about {
+			width: 100%;
+			display: flex;
+			text-align: center;
+			justify-content: center;
+
+		}
+	</style>
+
+{% endblock %}
+
+{% block title %}{{parent()}} | About Us
+	
+{% endblock %}
+{% block body %}
+	<h1 class='text-center'>
+		ABOUT US
+	</h1>
+
+	<div class='container-about'>
+		<div class="card h-5" style="width: 50rem;">
+			<img src="Assets/Images/sun.jpg" class="card-img-top" alt="...">
+			<div class="card-body">
+
+				<p class="card-text">StreetS est une société de vente de baskets créée par deux amis passionnés de sneakers. Tout a commencé il y a plusieurs années, lorsque ces deux amis se sont rencontrés dans un magasin de chaussures. Ils ont tous les deux été captivés par les mêmes paires de baskets et ont commencé à discuter de leur amour pour les chaussures de sport.
+					Au fil des années, leur passion pour les baskets a grandi et ils ont commencé à collectionner des paires rares et exclusives. Ils ont finalement décidé de créer leur propre entreprise de vente de baskets pour partager leur passion avec le monde entier.
+					
+					Ils ont travaillé dur pour créer leur entreprise, en recherchant les meilleurs fournisseurs de chaussures de sport du monde entier et en créant leur propre site web pour vendre leurs produits. Ils ont également parcouru les événements de sneakers pour se faire connaître dans la communauté des fans de baskets.
+					
+					Leur entreprise, StreetS, est maintenant devenue l'un des principaux détaillants de baskets en ligne, offrant des paires exclusives et des collaborations avec certaines des plus grandes marques de chaussures de sport. Les deux amis sont fiers de leur entreprise et de leur passion pour les baskets, et sont déterminés à continuer à partager leur amour pour les chaussures de sport avec le monde entier.</p>
+			</div>
+		</div>
+	</div>
+	{# <div class='container'>
+		<div class='img-about'>
+			<img src="Assets/Images/sun.jpg" alt="sun">
+		</div>
+		<div class='about-txt'>
+			<p>Notre entreprise de voyage a commencé lorsque deux amis, Marie et Pierre, ont décidé de partir en voyage autour du monde. Ils étaient fatigués de leur travail de bureau ennuyeux et avaient besoin de se ressourcer. Pendant leur voyage, ils ont réalisé à quel point voyager pouvait être enrichissant et transformateur. Ils ont décidé de créer leur propre entreprise de voyage pour aider les autres à vivre des expériences de voyage incroyables et à se reconnecter avec eux-mêmes.
+				
+				Au début, leur entreprise a commencé petit avec juste quelques destinations et quelques itinéraires. Cependant, leur passion pour les voyages a rapidement attiré l'attention des voyageurs du monde entier, et leur entreprise s'est rapidement développée. Ils ont commencé à ajouter de plus en plus de destinations à leur liste, et ont embauché une équipe d'experts en voyage pour aider les clients à planifier leur voyage parfait.
+				
+				Aujourd'hui, leur entreprise de voyage est l'une des plus populaires au monde, offrant des voyages de luxe et des itinéraires personnalisés pour les clients les plus exigeants. Marie et Pierre sont fiers de leur entreprise, mais plus que tout, ils sont heureux de voir que leur passion pour les voyages a aidé tant de personnes à découvrir le monde et à se connecter avec eux-mêmes et avec les autres.</p>
+		</div> #}
+	{# </div > #}
+{% endblock %}

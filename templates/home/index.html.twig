@@ -1,0 +1,57 @@
+{% extends 'base.html.twig' %}
+
+{% block stylesheets %}
+
+	<style>
+
+		.logo-home a img {
+			width: 30vh;
+			height: 10vh;
+			margin:auto;
+			margin-top: 2vh;
+		}
+	
+	.card{
+		width:25vw;
+		margin: auto;
+	}
+
+		.card-body {
+			text-align: center;
+		}
+	</style>
+
+{% endblock %}
+
+{% block title %}{{parent()}}{% endblock %}
+
+{% block body %}
+
+	{% include 'partials/carousel.html.twig'%}
+
+
+	<h1 class='logo-home text-center'>
+		<a href="href={{path('app_home')}}"><img src="Assets/Images/transparent.png" alt="logo"></a>
+	</h1>
+
+	<div class="row m-4">
+		{% for el in card %}
+			<div class="col-md-4 mb-5">
+				<div class="card w-75">
+					<img src="{{ el.image }}" class="card-img-top" alt="{{ el.titre }}">
+					<div class="card-body">
+						<h5 class="card-title">{{ el.titre }}</h5>
+						<p class="card-text">{{ el.description }}</p>
+						<p>
+							<b>{{el.prix}}€</b>
+						</p>
+						<div class='d-flex justify-content-center'>
+						<a href="{{path('app_login')}}" class="btn btn-primary w-50 mx-2">Acheter</a>
+						<a href="{{path('app_fiche_produit',{'id': el.id})}}" class="btn btn-primary w-50">Détails</a>
+						</div>
+					</div>
+				</div>
+			</div>
+		{% endfor %}
+	</div>
+{% endblock %}
